@@ -1,0 +1,6 @@
+Le relazioni che ho fatto sono:
+
+Utente 1 ──────────────── M Prestito
+Un utente può avere molti prestiti.
+Prestito M ──────────────── 1 Pubblicazione
+Un prestito è associato a una sola pubblicazione.
