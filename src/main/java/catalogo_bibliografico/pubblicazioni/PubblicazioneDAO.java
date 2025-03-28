@@ -26,6 +26,11 @@ public class PubblicazioneDAO {
         return em.find(Pubblicazione.class, isbn);
     }
     
+    public List<Pubblicazione> findAll() {
+        return em.createQuery("SELECT p FROM Pubblicazione p", Pubblicazione.class)
+                .getResultList();
+    }
+    
     public List<Libro> findLibriByYear(int year) {
         return em.createQuery("SELECT l FROM Libro l WHERE l.annoPubblicazione = :year", Libro.class)
                 .setParameter("year", year)
@@ -41,12 +46,6 @@ public class PubblicazioneDAO {
     public List<Libro> findLibriByTitolo(String titolo) {
         return em.createQuery("SELECT l FROM Libro l WHERE l.titolo LIKE :titolo", Libro.class)
                 .setParameter("titolo", "%" + titolo + "%")
-                .getResultList();
-    }
-    
-    public List<Rivista> findRivisteByYear(int year) {
-        return em.createQuery("SELECT r FROM Rivista r WHERE r.annoPubblicazione = :year", Rivista.class)
-                .setParameter("year", year)
                 .getResultList();
     }
     
