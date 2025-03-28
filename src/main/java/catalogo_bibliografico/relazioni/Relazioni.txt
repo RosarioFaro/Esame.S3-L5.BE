@@ -3,4 +3,4 @@ Le relazioni che ho fatto sono:
 Prestito M ──────────────── 1 Utente
 Molti prestiti possono essere effettuati da un utente.
 Prestito M ──────────────── 1 Pubblicazione
-Un prestito è associato a una sola pubblicazione.
+Molti prestiti possono essere associati alla stessa pubblicazione nel tempo.
